@@ -90,7 +90,7 @@ describe("Testing lock", () => {
         const targetBlockHeight = 10;
 
         // Advance the chain until the unlock height plus one.
-        simnet.mineEmptyBlocks(targetBlockHeight);
+        simnet.mineEmptyBlocks(targetBlockHeight + 1);
 
         const lockResponse = simnet.callPublicFn(
             "timelocked-wallet",
